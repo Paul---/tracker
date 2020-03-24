@@ -7,6 +7,8 @@ import HomePage from '../src/pages/HomePage/HomePage';
 import WelcomePage from '../src/pages/WelcomePage/WelcomePage';
 import SignupPage from '../src/pages/Signup/Signup';
 import LoginPage from '../src/pages/LoginPage/LoginPage';
+import NotFoundPage from '../src/pages/NotFoundPage/NotFoundPage';
+import OverviewPage from '../src/pages/OverviewPage/OverviewPage';
 
 function App() {
   return (
@@ -22,8 +24,14 @@ function App() {
         <Route path="/login">
           <LoginPage />
         </Route>
+        <Route path="/overview">
+          <OverviewPage />
+        </Route>
         <Route exact path="/">
           <WelcomePage />
+        </Route>
+        <Route exact path="**">
+          <NotFoundPage />
         </Route>
       </Switch>
     </div>

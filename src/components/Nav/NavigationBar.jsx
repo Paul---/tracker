@@ -12,10 +12,10 @@ export default function NavigationBar() {
       </Navbar.Brand>
       <Nav className='mr-auto'>
         <Nav.Link>
-          <Link>Overview</Link>
+          <Link to={'/overview'}>Overview</Link>
         </Nav.Link>
         <Nav.Link>
-          <Link>Issues</Link>
+          <Link to={'/'}>Issues</Link>
         </Nav.Link>
         <Nav.Link>
           <Link to={'/login'}>{isSignedIn ? 'Logout' : 'Login'}</Link>
