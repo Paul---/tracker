@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 
@@ -9,9 +9,10 @@ import SignupPage from '../src/pages/Signup/Signup';
 import LoginPage from '../src/pages/LoginPage/LoginPage';
 
 function App() {
+  const [isSignedIn, setIsSignedIn] = useState(false);
   return (
     <div className='container-fluid'>
-      <Header />
+      {isSignedIn ? <Header /> : null}
       <Switch>
         <Route path="/home">
           <HomePage />
