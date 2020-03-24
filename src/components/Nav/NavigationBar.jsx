@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 
 export default function NavigationBar() {
@@ -6,11 +7,13 @@ export default function NavigationBar() {
   const isSignedIn = true;
   return (
     <Navbar bg='dark' variant='dark'>
-      <Navbar.Brand href='#home'>Issue Tracker</Navbar.Brand>
+      <Navbar.Brand>Issue Tracker</Navbar.Brand>
       <Nav className='mr-auto'>
-        <Nav.Link href='#overview'>Overview</Nav.Link>
-        <Nav.Link href='#issues'>Issues</Nav.Link>
-        <Nav.Link href='#Login'>{isSignedIn ? 'Logout' : 'Login'}</Nav.Link>
+        <Nav.Link>Overview</Nav.Link>
+        <Nav.Link>Issues</Nav.Link>
+        <Nav.Link>
+          <Link to={'/login'}>{isSignedIn ? 'Logout' : 'Login'}</Link>
+        </Nav.Link>
       </Nav>
       {/* <Form inline>
         <FormControl type='text' placeholder='Search' className='mr-sm-2' />
