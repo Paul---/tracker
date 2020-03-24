@@ -15,7 +15,7 @@ export default function NavigationBar() {
           <Link to={'/overview'}>Overview</Link>
         </Nav.Link>
         <Nav.Link>
-          <Link to={'/'}>Issues</Link>
+          <Link to={'/issues'}>Issues</Link>
         </Nav.Link>
         <Nav.Link>
           <Link to={'/login'}>{isSignedIn ? 'Logout' : 'Login'}</Link>
