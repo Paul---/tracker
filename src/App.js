@@ -9,10 +9,11 @@ import SignupPage from '../src/pages/Signup/Signup';
 import LoginPage from '../src/pages/LoginPage/LoginPage';
 
 function App() {
-  const [isSignedIn, setIsSignedIn] = useState(false);
+  const [isSignedIn, setIsSignedIn] = useState(true);
   return (
     <div className='container-fluid'>
       {isSignedIn ? <Header /> : null}
+      <button onClick={() => setIsSignedIn(!isSignedIn)}>{isSignedIn ? 'Sign Out' : 'LOGIN'}</button>
       <Switch>
         <Route path="/home">
           <HomePage />
