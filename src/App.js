@@ -10,7 +10,7 @@ import LoginPage from '../src/pages/LoginPage/LoginPage';
 
 function App() {
   return (
-    <div className='container'>
+    <div className='container-fluid'>
       <Header />
       <Switch>
         <Route path="/home">
