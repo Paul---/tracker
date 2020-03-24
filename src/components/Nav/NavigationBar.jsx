@@ -1,16 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 
 export default function NavigationBar() {
   // change this to use acutal state later
   const isSignedIn = true;
   return (
     <Navbar bg='dark' variant='dark'>
-      <Navbar.Brand>Issue Tracker</Navbar.Brand>
+      <Navbar.Brand>
+        <Link to={'/'}>Issue Tracker</Link>
+      </Navbar.Brand>
       <Nav className='mr-auto'>
-        <Nav.Link>Overview</Nav.Link>
-        <Nav.Link>Issues</Nav.Link>
+        <Nav.Link>
+          <Link>Overview</Link>
+        </Nav.Link>
+        <Nav.Link>
+          <Link>Issues</Link>
+        </Nav.Link>
         <Nav.Link>
           <Link to={'/login'}>{isSignedIn ? 'Logout' : 'Login'}</Link>
         </Nav.Link>
