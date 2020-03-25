@@ -1,6 +1,7 @@
 import React from 'react';
 import IssuesList from '../../components/IssuesComponents/IssuesList/IssuesList';
 import ListItem from '../../components/ListItem/ListItem';
+import { Jumbotron } from 'react-bootstrap';
 
 const testIssuesArr = [
   {
@@ -30,7 +31,7 @@ const testIssuesArr = [
 ];
 export default function IssuesPage() {
   return (
-    <>
+    <Jumbotron fluid>
       <IssuesList>
         {testIssuesArr.map(el => {
           return (
@@ -44,6 +45,6 @@ export default function IssuesPage() {
           );
         })}
       </IssuesList>
-    </>
+    </Jumbotron>
   );
 }
