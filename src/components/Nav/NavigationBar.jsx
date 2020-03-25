@@ -18,7 +18,7 @@ export default function NavigationBar() {
           <Link to={'/issues'}>Issues</Link>
         </Nav.Link>
         <Nav.Link>
-          <Link to={'/login'}>{isSignedIn ? 'Logout' : 'Login'}</Link>
+          <Link to={'/'}>{isSignedIn ? 'Logout' : 'Login'}</Link>
         </Nav.Link>
       </Nav>
       {/* <Form inline>
