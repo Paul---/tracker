@@ -1,35 +1,27 @@
 import React from 'react';
-import Form from 'react-bootstrap/Form';
-import { Button, Jumbotron } from 'react-bootstrap';
+import Login from '../../components/Login/Login';
+import { Button, Jumbotron, Container } from 'react-bootstrap';
 
 export default function LoginPage() {
   return (
-    <Jumbotron style={styles}>
-      <Form>
-        <Form.Group controlId='formBasicEmail'>
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type='email' placeholder='Enter email' />
-          <Form.Text className='text-muted'>
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group controlId='formBasicPassword'>
-          <Form.Label>Password</Form.Label>
-          <Form.Control type='password' placeholder='Password' />
-        </Form.Group>
-        <Form.Group controlId='formBasicCheckbox'>
-          <Form.Check type='checkbox' label='Check me out' />
-        </Form.Group>
-        <Button variant='primary' type='submit'>
-          Submit
-        </Button>
-      </Form>
+    <Jumbotron style={styles.jumbotron}>
+      <Container style={styles.headerSection} className='container-fluid'>
+        <h1>Welcome</h1>
+        <h3>Please Sign In</h3>
+      </Container>
+      <Login />
     </Jumbotron>
   );
 }
 
 const styles = {
-  marginLeft: 'auto',
-  marginRight: 'auto'
+  jumbotron: {
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
+  headerSection: {
+    display: 'flex',
+    flexDirection:'column',
+    alignItems: 'center'
+  }
 };
