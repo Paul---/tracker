@@ -17,29 +17,15 @@ function App() {
     <Container fluid>
       <Header />
       <Switch>
-        <Route path="/home">
-          <HomePage />
-        </Route>
-        <Route path="/signup">
-          <SignupPage />
-        </Route>
-        <Route path="/login">
-          <LoginPage />
-        </Route>
-        <Route path="/overview">
-          <OverviewPage />
-        </Route>
-        <Route path="/issues">
-          <IssuesPage />
-        </Route>
-        <Route exact path="/">
-          <WelcomePage />
-        </Route>
-        <Route exact path="**">
-          <NotFoundPage />
-        </Route>
+        <Route path="/home" component={HomePage} />
+        <Route path="/signup" component={SignupPage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/overview" component={OverviewPage} />
+        <Route path="/issues" component={IssuesPage} />
+        <Route exact path="/" component={WelcomePage} />
+        <Route path="**" component={NotFoundPage} />
       </Switch>
-    </Container>
+    </Container >
   );
 }
 
