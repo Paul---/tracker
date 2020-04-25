@@ -5,11 +5,9 @@ import { setTest } from '../../redux/actions/testActions';
 
 export default function Login() {
   const dispatch = useDispatch();
-  const test =  useSelector((state) => state.test.test);
 
   return (
     <>
-      <h1>Test = {test}</h1>
       <Form>
         <Form.Group controlId='formBasicEmail'>
           <Form.Label>Email address</Form.Label>
