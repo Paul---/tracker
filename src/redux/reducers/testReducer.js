@@ -7,8 +7,7 @@ const testReducer = (state = INITIAL_STATE, action) => {
     // change below
     case 'SET_TEST':
       return {
-        ...state,
-        currentUser: action.payload
+        test: action.payload
       }
     default:
       return state;
